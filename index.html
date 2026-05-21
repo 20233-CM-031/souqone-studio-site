@@ -28,8 +28,17 @@
     />
   </head>
   <body>
-    <form name="pilot-application" method="POST" data-netlify="true" action="/thank-you" hidden>
+    <form
+      name="pilot-application"
+      method="POST"
+      netlify
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="/thank-you"
+      hidden
+    >
       <input type="hidden" name="form-name" value="pilot-application" />
+      <input name="bot-field" />
       <input name="full_name" />
       <input name="shop_name" />
       <input name="whatsapp" />

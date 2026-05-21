@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SouqOne Studio Form Registration</title>
+  </head>
+  <body>
+    <form
+      name="pilot-application"
+      method="POST"
+      netlify
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="/thank-you"
+    >
+      <input type="hidden" name="form-name" value="pilot-application" />
+      <p>
+        <label>Do not fill this field <input name="bot-field" /></label>
+      </p>
+      <p>
+        <label>Full name <input name="full_name" required /></label>
+      </p>
+      <p>
+        <label>Shop/business name <input name="shop_name" required /></label>
+      </p>
+      <p>
+        <label>WhatsApp number <input name="whatsapp" required /></label>
+      </p>
+      <p>
+        <label>Area / locality in Hyderabad <input name="area" /></label>
+      </p>
+      <p>
+        <label>
+          Business category
+          <select name="category">
+            <option>Jewelry</option>
+            <option>Bangles</option>
+            <option>Pearls</option>
+            <option>Boutique</option>
+            <option>Accessories</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label>
+          Monthly product photos
+          <select name="monthly_photos">
+            <option>Below 30</option>
+            <option>30-100</option>
+            <option>100-200</option>
+            <option>200+</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label>
+          Interested plan
+          <select name="plan">
+            <option>Go To Pilot - Rs 149</option>
+            <option>Starter Seller - Rs 999</option>
+            <option>Shop Seller - Rs 2,999</option>
+            <option>Premium Catalog Pack - Rs 4,999</option>
+            <option>Need guidance</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label>Message / requirement <textarea name="message"></textarea></label>
+      </p>
+      <button type="submit">Submit Pilot Request</button>
+    </form>
+  </body>
+</html>

@@ -17,8 +17,16 @@ export function PilotForm() {
             </a>
           </div>
 
-          <form name="pilot-application" method="POST" data-netlify="true" action="/thank-you" className="panel p-6 lg:p-8">
+          <form
+            name="pilot-application"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/thank-you"
+            className="panel p-6 lg:p-8"
+          >
             <input type="hidden" name="form-name" value="pilot-application" />
+            <input type="hidden" name="bot-field" />
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="field-label">
                 Full name
