@@ -1,0 +1,42 @@
+export const showcaseSamples = [
+  {
+    slug: 'earrings',
+    title: 'Pearl hoop earrings',
+    category: 'Jewelry display',
+    src: '/samples/showcase-earrings.jpg',
+    alt: 'Before and after transformation of pearl hoop earrings into a premium jewelry display photo',
+    note: 'Phone-counter input becomes a showroom-ready earring stand while keeping the pearl and hoop identity intact.',
+  },
+  {
+    slug: 'necklace',
+    title: 'Gold necklace set',
+    category: 'Catalog hero image',
+    src: '/samples/showcase-necklace.jpg',
+    alt: 'Before and after transformation of a gold necklace into a clean catalog hero image',
+    note: 'A flat seller photo is rebuilt into a premium catalog surface with clearer detail and better perceived value.',
+  },
+  {
+    slug: 'ring',
+    title: 'Diamond ring set',
+    category: 'Close product detail',
+    src: '/samples/showcase-ring.jpg',
+    alt: 'Before and after transformation of a diamond ring set into a close product detail photo',
+    note: 'The ring remains the same product while lighting, background, and presentation become sharper.',
+  },
+  {
+    slug: 'bangles',
+    title: 'Gold bangle stack',
+    category: 'Premium product scene',
+    src: '/samples/showcase-bangles.jpg',
+    alt: 'Before and after transformation of gold bangles into a premium product scene',
+    note: 'A simple fabric-background shot becomes a warm product scene suitable for WhatsApp and catalog use.',
+  },
+  {
+    slug: 'bracelets',
+    title: 'Color bracelet set',
+    category: 'Seller-friendly lifestyle asset',
+    src: '/samples/showcase-bracelets.jpg',
+    alt: 'Before and after transformation of colorful bracelets into a seller-friendly lifestyle asset',
+    note: 'The colorful handmade identity is preserved while the image becomes brighter, cleaner, and more sellable.',
+  },
+];

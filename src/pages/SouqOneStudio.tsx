@@ -1,6 +1,8 @@
+import { AdsVideoShowcase } from '../components/AdsVideoShowcase';
 import { FutureDemo } from '../components/FutureDemo';
 import { PageHero } from '../components/PageHero';
 import { PilotForm } from '../components/PilotForm';
+import { ShowcaseGallery } from '../components/ShowcaseGallery';
 import { studioFeatures, studioWorkflow } from '../data/brand';
 import { whatsappLinks } from '../data/contact';
 
@@ -9,8 +11,8 @@ export function SouqOneStudio() {
     <div className="brand-page theme-studio">
       <PageHero
         eyebrow="SouqOne Studio"
-        title="Premium catalog assets without losing product truth."
-        copy="SouqOne Studio takes its visual tone from the warm studio logo: premium, seller-friendly, and practical. It helps local sellers turn ordinary photos into showroom-ready catalog assets while preserving identity."
+        title="Premium catalog assets and AI ads without losing product truth."
+        copy="SouqOne Studio takes its visual tone from the warm studio logo: premium, seller-friendly, and practical. It helps local sellers turn ordinary photos into showroom-ready catalog assets and AI ad creatives while preserving identity."
         logoSrc="/brand/souqone-studio.png"
         logoAlt="SouqOne Studio logo"
       >
@@ -26,14 +28,37 @@ export function SouqOneStudio() {
             <p className="brand-kicker">Product demo</p>
             <h2 className="section-title mt-4">Cleaner visuals, sharper catalogs, same product identity.</h2>
             <p className="section-copy mt-5">
-              The real before and after images you share will replace the temporary samples here.
-              The surrounding system already matches the SouqOne Studio logo palette.
+              The proof area now uses your real before and after effect images. The surrounding
+              system keeps the SouqOne Studio logo palette: warm, premium, practical, and focused
+              on seller conversion.
             </p>
           </div>
         </div>
       </section>
 
       <section className="brand-section border-y" style={{ borderColor: 'var(--line)', background: 'rgba(255,255,255,0.24)' }}>
+        <div className="section-shell">
+          <div className="max-w-3xl">
+            <p className="brand-kicker">Sample outputs</p>
+            <h2 className="section-title mt-4">Real transformations sellers can understand fast.</h2>
+            <p className="section-copy mt-5">
+              The gallery shows the core promise clearly: ordinary seller photos become
+              showroom-ready assets while the product identity remains recognizable.
+            </p>
+          </div>
+          <div className="mt-10">
+            <ShowcaseGallery />
+          </div>
+        </div>
+      </section>
+
+      <section className="brand-section">
+        <div className="section-shell">
+          <AdsVideoShowcase />
+        </div>
+      </section>
+
+      <section className="brand-section border-y" style={{ borderColor: 'var(--line)', background: 'rgba(255,255,255,0.18)' }}>
         <div className="section-shell">
           <p className="brand-kicker">Features</p>
           <h2 className="section-title mt-4 max-w-3xl">Built for sellers who need repeatable visual assets.</h2>

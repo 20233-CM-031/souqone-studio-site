@@ -1,5 +1,5 @@
 export const openingCopy =
-  'MARZ Enterprises & Solutions is building ethical AI and digital commerce systems for real-world businesses. Our first initiative, SouqOne, begins with SouqOne Studio — an AI-powered visual commerce tool that helps local sellers turn ordinary product photos into showroom-ready catalog assets while preserving product truth and customer trust.';
+  'MARZ Enterprises & Solutions is building ethical AI and digital commerce systems for real-world businesses. Our first initiative, SouqOne, begins with SouqOne Studio - an AI-powered visual commerce tool that helps local sellers turn ordinary product photos into showroom-ready catalog assets and AI ad creatives while preserving product truth and customer trust.';
 
 export const storyChapters = [
   {
@@ -47,6 +47,7 @@ export const studioFeatures = [
   'Product image cleanup',
   'Showroom-ready visual direction',
   'WhatsApp product cards',
+  'AI ads creative services',
   'Mini catalog PDFs',
   'Seller branding placement',
   'Manual review before delivery',
@@ -57,7 +58,7 @@ export const studioWorkflow = [
   'SouqOne Studio checks image quality and pilot fit',
   'AI-assisted enhancement improves presentation',
   'Manual review protects product truth',
-  'Seller receives images, cards, or catalog files',
+  'Seller receives images, ad creatives, cards, or catalog files',
 ];
 
 export const roadmap = [

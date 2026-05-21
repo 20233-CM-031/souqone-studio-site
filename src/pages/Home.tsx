@@ -103,11 +103,11 @@ export function Home() {
             </div>
             <p className="brand-kicker">SouqOne Studio</p>
             <h2 className="mt-4 text-3xl font-black">
-              The first product: visual commerce assets for WhatsApp sellers.
+              The first product: visual commerce and AI ad assets for WhatsApp sellers.
             </h2>
             <p className="mt-4 max-w-3xl leading-7" style={{ color: 'var(--muted)' }}>
-              Studio begins as a managed pilot: product image enhancement, WhatsApp cards, and
-              mini-catalog assets with manual review for truth and quality.
+              Studio begins as a managed pilot: product image enhancement, WhatsApp cards,
+              mini-catalog assets, and AI ad creatives with manual review for truth and quality.
             </p>
             <Link to="/studio" className="brand-button mt-6">
               See Product Demo
@@ -122,8 +122,8 @@ export function Home() {
             <p className="brand-kicker">First pilot surface</p>
             <h2 className="section-title mt-4">A calmer product demo with proof space ready.</h2>
             <p className="section-copy mt-5">
-              The Studio visual area now has a warmer premium system inspired by the SouqOne Studio
-              mark. Your real before and after images can replace the temporary samples here.
+              The Studio visual area now pairs the warmer premium system with real before and after
+              effect images and a sample AI ads video, so sellers see proof before they send sample photos.
             </p>
           </div>
           <FutureDemo />
