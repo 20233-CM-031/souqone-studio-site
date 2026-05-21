@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #101113;
+  background: #f8f3ea;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  color: #101113;
+  background: #c7a45b;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-gold;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl font-bold leading-tight text-charcoal sm:text-4xl lg:text-5xl;
+  }
+
+  .section-copy {
+    @apply max-w-3xl text-base leading-8 text-zinc-700 sm:text-lg;
+  }
+
+  .panel {
+    @apply rounded-lg border border-black/10 bg-white/80 shadow-sm;
+  }
+
+  .dark-panel {
+    @apply rounded-lg border border-white/10 bg-white/[0.06] shadow-glow;
+  }
+
+  .whatsapp-button {
+    @apply inline-flex items-center justify-center rounded-lg bg-emerald px-5 py-3 text-sm font-bold text-white shadow-lg shadow-emerald/20 transition hover:bg-[#0c5c44] focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-cream;
+  }
+
+  .gold-button {
+    @apply inline-flex items-center justify-center rounded-lg bg-gold px-5 py-3 text-sm font-bold text-charcoal shadow-lg shadow-gold/20 transition hover:bg-[#b99445] focus:outline-none focus:ring-2 focus:ring-emerald focus:ring-offset-2 focus:ring-offset-cream;
+  }
+
+  .outline-button {
+    @apply inline-flex items-center justify-center rounded-lg border border-charcoal/15 px-5 py-3 text-sm font-bold text-charcoal transition hover:border-emerald hover:text-emerald focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-cream;
+  }
+
+  .field-label {
+    @apply block text-sm font-bold text-charcoal;
+  }
+
+  .field-input {
+    @apply mt-2 w-full rounded-lg border border-black/10 bg-white px-4 py-3 text-sm text-charcoal outline-none transition placeholder:text-zinc-400 focus:border-emerald focus:ring-4 focus:ring-emerald/10;
+  }
+}
