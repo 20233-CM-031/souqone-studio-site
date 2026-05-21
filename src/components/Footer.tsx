@@ -15,7 +15,7 @@ export function Footer() {
               Calm, ethical AI systems for real businesses.
             </h2>
             <p className="mt-4 max-w-lg text-sm leading-7" style={{ color: 'var(--muted)' }}>
-              MARZ builds ethical AI and digital commerce systems. SouqOne is the first initiative;
+              MARZ builds ethical AI and digital commerce systems. SouqOne is the first initiative
               SouqOne Studio is the first seller-facing pilot.
             </p>
           </div>
