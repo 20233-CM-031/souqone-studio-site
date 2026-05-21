@@ -28,9 +28,7 @@ export function SouqOneStudio() {
             <p className="brand-kicker">Product demo</p>
             <h2 className="section-title mt-4">Cleaner visuals, sharper catalogs, same product identity.</h2>
             <p className="section-copy mt-5">
-              The proof area now uses your real before and after effect images. The surrounding
-              system keeps the SouqOne Studio logo palette: warm, premium, practical, and focused
-              on seller conversion.
+              
             </p>
           </div>
         </div>
