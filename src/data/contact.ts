@@ -7,11 +7,11 @@ const encode = (message: string) => encodeURIComponent(message);
 
 export const whatsappMessages = {
   general:
-    'Assalamu Alaikum, I want to join the SouqOne Studio pilot. I sell [product type] in Hyderabad. Please guide me.',
+    'Hi SouqOne, I want a free sample for my shop. I sell [product type] in Hyderabad. Please guide me.',
   sample:
-    'Assalamu Alaikum, I want to send sample product photos for SouqOne Studio showroom/catalog enhancement.',
+    'Hi SouqOne, I want a free sample for my shop.',
   plan:
-    'Assalamu Alaikum, I am interested in the Shop Seller Pilot plan for SouqOne Studio. Please share the next steps.',
+    'Hi SouqOne, I want to know the best SouqOne Studio package for my shop.',
 };
 
 export const whatsappLinks = {

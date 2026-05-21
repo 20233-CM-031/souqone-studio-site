@@ -40,32 +40,30 @@ export const souqOnePrinciples = [
   'Start with local seller pain',
   'Make digital selling easier',
   'Protect product identity',
-  'Build from real pilot feedback',
+  'Build from real seller feedback',
 ];
 
 export const studioFeatures = [
   'Product image cleanup',
   'Showroom-ready visual direction',
+  'Starting ₹149 for 5 photos',
   'WhatsApp product cards',
   'AI ads creative services',
   'Mini catalog PDFs',
-  'Seller branding placement',
-  'Manual review before delivery',
+  'Personal editing and review',
 ];
 
 export const studioWorkflow = [
-  'Seller sends sample product photos on WhatsApp',
-  'SouqOne Studio checks image quality and pilot fit',
-  'AI-assisted enhancement improves presentation',
-  'Manual review protects product truth',
-  'Seller receives images, ad creatives, cards, or catalog files',
+  'WhatsApp your product photo',
+  'I send a free edited sample',
+  'Pay only if you like it',
 ];
 
 export const roadmap = [
   {
     phase: 'Now',
-    title: 'Concierge pilot',
-    body: 'Work directly with selected Hyderabad sellers through WhatsApp.',
+    title: 'Hands-on WhatsApp service',
+    body: 'Work directly with Hyderabad sellers through WhatsApp.',
   },
   {
     phase: 'Next',
@@ -75,6 +73,6 @@ export const roadmap = [
   {
     phase: 'Later',
     title: 'SouqOne platform layer',
-    body: 'Build broader local commerce systems after the pilot proves what sellers actually need.',
+    body: 'Build broader local commerce systems after the service proves what sellers actually need.',
   },
 ];

@@ -1,5 +1,5 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { whatsappLinks } from '../data/contact';
+import { displayWhatsapp, whatsappLinks } from '../data/contact';
 
 const navItems = [
   ['Home', '/'],
@@ -24,16 +24,16 @@ export function Header() {
   return (
     <header className={`sticky top-0 z-50 border-b bg-white/82 backdrop-blur-2xl ${themeClass}`} style={{ borderColor: 'var(--line)' }}>
       <div className="section-shell flex min-h-20 items-center justify-between gap-4">
-        <Link to="/" className="flex items-center gap-3" aria-label="MARZ home">
-          <span className="brand-logo-card flex h-12 w-12 items-center justify-center rounded-2xl">
-            <img src="/brand/marz.png" alt="MARZ logo" className="h-full w-full object-cover" />
+        <Link to="/" className="flex items-center gap-3" aria-label="SouqOne Studio home">
+          <span className="brand-logo-card flex h-12 w-16 items-center justify-center rounded-2xl">
+            <img src="/brand/souqone-studio.png" alt="SouqOne Studio logo" className="h-full w-full object-cover" />
           </span>
           <span className="leading-tight">
             <span className="block font-heading text-lg font-black" style={{ color: 'var(--ink)' }}>
-              MARZ
+              SouqOne Studio
             </span>
             <span className="block text-xs font-bold" style={{ color: 'var(--muted)' }}>
-              Ethical AI commerce systems
+              Catalog photos + AI ads
             </span>
           </span>
         </Link>
@@ -54,9 +54,14 @@ export function Header() {
           ))}
         </nav>
 
-        <a href={whatsappLinks.sample} className="brand-button hidden sm:inline-flex">
-          Send Sample Photos
-        </a>
+        <div className="hidden items-center gap-3 sm:flex">
+          <a href={whatsappLinks.sample} className="text-sm font-black hover:text-[var(--accent)]">
+            {displayWhatsapp}
+          </a>
+          <a href={whatsappLinks.sample} className="brand-button">
+            Get Free Sample
+          </a>
+        </div>
       </div>
       <nav className="section-shell flex gap-3 overflow-x-auto pb-4 text-sm font-bold lg:hidden" style={{ color: 'var(--muted)' }}>
         {navItems.map(([label, href]) => (

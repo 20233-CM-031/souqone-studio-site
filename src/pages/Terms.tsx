@@ -6,15 +6,15 @@ export function Terms() {
     <LegalPage
       eyebrow="Terms"
       title="Terms of Use"
-      intro="SouqOne Studio provides AI-assisted and manually reviewed product image enhancement, product cards, and catalog design services for local sellers. During the pilot, the service is managed manually through WhatsApp and may not operate like a fully automated software platform."
+      intro="SouqOne Studio provides AI-assisted and manually reviewed product image enhancement, product cards, catalog design, and AI ad creative services for local sellers. The service is handled manually through WhatsApp and may not operate like a fully automated software platform."
       sections={[
         {
           title: 'Service description',
           body: 'The service helps sellers prepare clean product images, showroom-style visuals, WhatsApp product cards, PDF mini-catalogs, and related promotional assets.',
         },
         {
-          title: 'Pilot-stage nature',
-          body: 'SouqOne Studio is currently an early managed pilot. Service scope, pricing, timelines, and delivery format may change as we learn from real sellers.',
+          title: 'Manual service nature',
+          body: 'SouqOne Studio is currently a hands-on WhatsApp service. Scope, pricing, timelines, and delivery format may change as we learn from real sellers.',
         },
         {
           title: 'Seller responsibilities',
@@ -26,11 +26,11 @@ export function Terms() {
         },
         {
           title: 'Payment and delivery',
-          body: 'Payments are handled manually through UPI after pilot approval and plan confirmation. Delivery is handled through WhatsApp or Drive link.',
+          body: 'Payments are handled manually through UPI after plan confirmation. Delivery is handled through WhatsApp or Drive link.',
         },
         {
           title: 'Revisions and refunds',
-          body: 'If an output is technically broken or clearly inaccurate due to our process, we may provide correction or replacement. Refunds, if any, are handled case by case during the pilot.',
+          body: 'If an output is technically broken or clearly inaccurate due to our process, we may provide correction or replacement. Refunds, if any, are handled case by case.',
         },
         {
           title: 'Prohibited use',
@@ -42,7 +42,7 @@ export function Terms() {
         },
         {
           title: 'Changes to service',
-          body: 'We may update service packages, workflow, pricing, or policies as the pilot develops.',
+          body: 'We may update service packages, workflow, pricing, or policies as the service develops.',
         },
         {
           title: 'Contact',

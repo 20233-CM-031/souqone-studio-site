@@ -7,18 +7,18 @@ export function PilotForm() {
       <div className="section-shell relative">
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="reveal-card">
-            <p className="eyebrow">Pilot access</p>
-            <h2 className="section-title mt-4">Apply for SouqOne Studio.</h2>
+            <p className="eyebrow">Get Started in 2 Minutes</p>
+            <h2 className="section-title mt-4">Get free sample on WhatsApp.</h2>
             <p className="section-copy mt-5">
-              This is a WhatsApp-first pilot for selected local sellers. The website captures
-              intent; the real pilot conversation starts on WhatsApp with sample product photos.
+              Step 1: WhatsApp your product photo. Step 2: I send a free edited sample.
+              Step 3: pay only if you like it.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={whatsappLinks.sample} className="brand-button">
-                Send Sample Photos
+                Get Free Sample on WhatsApp
               </a>
               <a href={whatsappLinks.general} className="brand-button-secondary">
-                Ask Before Applying
+                Ask First
               </a>
             </div>
           </div>
@@ -57,6 +57,8 @@ export function PilotForm() {
                   <option>Bangles</option>
                   <option>Pearls</option>
                   <option>Boutique</option>
+                  <option>Clothing</option>
+                  <option>Furniture</option>
                   <option>Accessories</option>
                   <option>Other</option>
                 </select>
@@ -73,10 +75,10 @@ export function PilotForm() {
               <label className="field-label sm:col-span-2">
                 Interested plan
                 <select className="field-input" name="plan" defaultValue="Need guidance">
-                  <option>Go To Pilot - Rs 149</option>
-                  <option>Starter Seller - Rs 999</option>
-                  <option>Shop Seller - Rs 2,999</option>
-                  <option>Premium Catalog Pack - Rs 4,999</option>
+                  <option>Starter - ₹149</option>
+                  <option>Small - ₹599</option>
+                  <option>Medium - ₹999</option>
+                  <option>Mega - ₹4,999</option>
                   <option>Need guidance</option>
                 </select>
               </label>
@@ -86,7 +88,7 @@ export function PilotForm() {
               </label>
             </div>
             <button type="submit" className="brand-button mt-6 w-full">
-              Submit Pilot Request
+              Get Free Sample
             </button>
           </form>
         </div>

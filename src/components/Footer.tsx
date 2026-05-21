@@ -12,11 +12,11 @@ export function Footer() {
             </div>
             <p className="eyebrow">MARZ Enterprises & Solutions</p>
             <h2 className="mt-3 max-w-md font-heading text-3xl font-black leading-tight">
-              Calm, ethical AI systems for real businesses.
+              SouqOne Studio edits product photos for real sellers.
             </h2>
             <p className="mt-4 max-w-lg text-sm leading-7" style={{ color: 'var(--muted)' }}>
-              MARZ builds ethical AI and digital commerce systems. SouqOne is the first initiative
-              SouqOne Studio is the first seller-facing pilot.
+              Send a phone photo on WhatsApp, get one free edited sample, and continue only
+              if the output helps your shop.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 flex flex-col gap-3 border-t pt-6 text-xs sm:flex-row sm:items-center sm:justify-between" style={{ borderColor: 'var(--line)', color: 'var(--muted)' }}>
-          <span>Currently operating as a selected Hyderabad seller pilot.</span>
+          <span>Serving jewellery, clothing, and furniture sellers in Hyderabad.</span>
           <span>MARZ / SouqOne / SouqOne Studio</span>
         </div>
       </div>

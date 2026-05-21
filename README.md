@@ -1,6 +1,6 @@
 # MARZ / SouqOne / SouqOne Studio Website
 
-Static MARZ-first website for ethical AI commerce positioning, SouqOne initiative storytelling, and SouqOne Studio WhatsApp pilot lead generation.
+Static SouqOne Studio website for WhatsApp-first lead generation, showroom catalog photo editing, and AI ad creative services under the MARZ / SouqOne initiative.
 
 ## Initiative
 
@@ -52,7 +52,7 @@ This repository is connected to Netlify continuous deployment from the `main` br
 - Form name: `pilot-application`
 
 The project includes `netlify.toml` with the SPA redirect required for `/privacy`, `/terms`, `/ethics`, and `/thank-you`.
-Netlify Forms are registered through the static `public/__forms.html` file and mirrored in the React pilot form.
+Netlify Forms are registered through the static `public/__forms.html` file and mirrored in the React free-sample form.
 
 ## Important Placeholders
 
@@ -61,7 +61,7 @@ Review before public launch:
 - WhatsApp number in `src/data/contact.ts`
 - Contact email in `src/data/contact.ts`
 - Founder LinkedIn URL in `src/data/contact.ts`
-- UPI/payment wording if the pilot process changes
+- UPI/payment wording if the service process changes
 - Any future social links
 
 ## Brand Assets
@@ -77,7 +77,7 @@ Each primary page uses a logo-led theme:
 
 ## Launch Status
 
-This site is for MARZ brand positioning and the early WhatsApp-first pilot of SouqOne Studio.
+This site is for SouqOne Studio WhatsApp conversion, with MARZ brand positioning kept in supporting pages.
 
 It intentionally does not include:
 
@@ -95,7 +95,7 @@ It intentionally does not include:
 - `/souqone` - SouqOne initiative
 - `/studio` - SouqOne Studio conversion page
 - `/principles` - ethical AI and truthful commerce principles
-- `/contact` - WhatsApp, email, and pilot form
+- `/contact` - WhatsApp, email, and free-sample form
 - `/privacy` - privacy policy starter draft
 - `/terms` - terms of use starter draft
 - `/ethics` - ethical commerce statement

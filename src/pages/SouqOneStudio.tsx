@@ -1,34 +1,26 @@
 import { AdsVideoShowcase } from '../components/AdsVideoShowcase';
 import { FutureDemo } from '../components/FutureDemo';
-import { PageHero } from '../components/PageHero';
 import { PilotForm } from '../components/PilotForm';
+import { PricingSection } from '../components/PricingSection';
 import { ShowcaseGallery } from '../components/ShowcaseGallery';
+import { StudioProofHero } from '../components/StudioProofHero';
 import { studioFeatures, studioWorkflow } from '../data/brand';
-import { whatsappLinks } from '../data/contact';
 
 export function SouqOneStudio() {
   return (
     <div className="brand-page theme-studio">
-      <PageHero
-        eyebrow="SouqOne Studio"
-        title="Premium catalog assets and AI ads without losing product truth."
-        copy="SouqOne Studio takes its visual tone from the warm studio logo: premium, seller-friendly, and practical. It helps local sellers turn ordinary photos into showroom-ready catalog assets and AI ad creatives while preserving identity."
-        logoSrc="/brand/souqone-studio.png"
-        logoAlt="SouqOne Studio logo"
-      >
-        <a href={whatsappLinks.sample} className="brand-button">
-          Send Sample Photos
-        </a>
-      </PageHero>
+      <StudioProofHero />
+      <PricingSection />
 
       <section className="brand-section">
         <div className="section-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <FutureDemo />
           <div>
             <p className="brand-kicker">Product demo</p>
-            <h2 className="section-title mt-4">Cleaner visuals, sharper catalogs, same product identity.</h2>
+            <h2 className="section-title mt-4">Original phone photo vs SouqOne Studio output.</h2>
             <p className="section-copy mt-5">
-              
+              These are direct before and after examples for jewellery, clothing, and furniture.
+              The goal is simple: make the product easier to sell without confusing the customer.
             </p>
           </div>
         </div>
@@ -74,7 +66,7 @@ export function SouqOneStudio() {
       <section className="brand-section">
         <div className="section-shell">
           <p className="brand-kicker">Workflow</p>
-          <h2 className="section-title mt-4 max-w-3xl">WhatsApp-first, review-backed, pilot-ready.</h2>
+          <h2 className="section-title mt-4 max-w-3xl">Get Started in 2 Minutes.</h2>
           <div className="mt-10 grid gap-4">
             {studioWorkflow.map((step, index) => (
               <article key={step} className="brand-card p-5 sm:flex sm:items-center sm:gap-6">

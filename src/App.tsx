@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+import { StickyWhatsAppButton } from './components/StickyWhatsAppButton';
 import { AboutMarz } from './pages/AboutMarz';
 import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
@@ -31,6 +32,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <StickyWhatsAppButton />
     </div>
   );
 }

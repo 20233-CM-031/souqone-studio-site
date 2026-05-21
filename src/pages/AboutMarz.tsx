@@ -16,7 +16,7 @@ const story = [
   },
   {
     title: 'First initiative',
-    body: 'SouqOne is the first MARZ initiative. SouqOne Studio is its first focused pilot, built to learn from real local sellers before expanding into a wider commerce platform.',
+    body: 'SouqOne is the first MARZ initiative. SouqOne Studio is its first focused service, built to learn from real local sellers before expanding into a wider commerce platform.',
   },
 ];
 

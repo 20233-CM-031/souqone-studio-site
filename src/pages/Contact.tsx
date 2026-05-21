@@ -7,13 +7,13 @@ export function Contact() {
     <div className="brand-page theme-principles">
       <PageHero
         eyebrow="Contact"
-        title="Start the pilot conversation."
-        copy="For the fastest response, message SouqOne Studio on WhatsApp with your shop name, product category, and sample product photos."
+        title="Get free sample on WhatsApp."
+        copy="For the fastest response, message SouqOne Studio with your shop name, product category, and one product photo."
         logoSrc="/brand/souqone-studio.png"
         logoAlt="SouqOne Studio logo"
       >
         <a href={whatsappLinks.sample} className="brand-button">
-          WhatsApp: {displayWhatsapp}
+          Get Free Sample: {displayWhatsapp}
         </a>
         <a href={`mailto:${contactEmail}`} className="brand-button-secondary">
           Email MARZ

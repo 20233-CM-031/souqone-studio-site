@@ -34,8 +34,8 @@ export function FutureDemo({ featuredSlug = 'earrings', logoSrc = '/brand/souqon
           <img
             src={featured.src}
             alt={featured.alt}
-            width={1672}
-            height={941}
+            width={featured.width}
+            height={featured.height}
             className="w-full bg-white/40 object-contain"
           />
           <figcaption
@@ -57,9 +57,9 @@ export function FutureDemo({ featuredSlug = 'earrings', logoSrc = '/brand/souqon
               <img
                 src={sample.src}
                 alt={sample.alt}
-                width={1672}
-                height={941}
-                className="aspect-[1672/941] w-full bg-white/40 object-contain"
+                width={sample.width}
+                height={sample.height}
+                className="w-full bg-white/40 object-contain"
               />
               <figcaption className="px-3 py-2 text-xs font-black" style={{ color: 'var(--ink)' }}>
                 {sample.title}

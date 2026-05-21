@@ -10,12 +10,12 @@ export function ThankYou() {
           <p className="eyebrow">Request received</p>
           <h1 className="mt-3 font-heading text-4xl font-black">Thank you.</h1>
           <p className="mt-5 text-lg leading-8" style={{ color: 'var(--muted)' }}>
-            Your pilot request has been received. Please also message us on WhatsApp with your shop
-            name and sample product photos.
+            Your request has been received. Please also message us on WhatsApp with your shop
+            name and one product photo so I can send the free sample.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <a href={whatsappLinks.sample} className="brand-button">
-              Message on WhatsApp
+              Get Free Sample on WhatsApp
             </a>
             <Link to="/" className="brand-button-secondary">
               Back to website
