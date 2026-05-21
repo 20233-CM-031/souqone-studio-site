@@ -2,8 +2,8 @@ import { whatsappLinks } from '../data/contact';
 
 export function PilotForm() {
   return (
-    <section id="apply" className="relative overflow-hidden py-20 sm:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(77,216,255,0.12),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(20,160,111,0.14),transparent_34%)]" />
+    <section id="apply" className="brand-section">
+      <div className="brand-pattern absolute inset-0 opacity-25" />
       <div className="section-shell relative">
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="reveal-card">
@@ -14,10 +14,10 @@ export function PilotForm() {
               intent; the real pilot conversation starts on WhatsApp with sample product photos.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={whatsappLinks.sample} className="whatsapp-button">
+              <a href={whatsappLinks.sample} className="brand-button">
                 Send Sample Photos
               </a>
-              <a href={whatsappLinks.general} className="outline-button">
+              <a href={whatsappLinks.general} className="brand-button-secondary">
                 Ask Before Applying
               </a>
             </div>
@@ -29,7 +29,7 @@ export function PilotForm() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             action="/thank-you"
-            className="panel p-5 sm:p-7"
+            className="brand-card p-5 sm:p-7"
           >
             <input type="hidden" name="form-name" value="pilot-application" />
             <input type="hidden" name="bot-field" />
@@ -85,7 +85,7 @@ export function PilotForm() {
                 <textarea className="field-input min-h-32 resize-y" name="message" />
               </label>
             </div>
-            <button type="submit" className="whatsapp-button mt-6 w-full">
+            <button type="submit" className="brand-button mt-6 w-full">
               Submit Pilot Request
             </button>
           </form>

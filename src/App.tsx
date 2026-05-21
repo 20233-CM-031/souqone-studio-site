@@ -14,7 +14,7 @@ import { ThankYou } from './pages/ThankYou';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-charcoal text-white">
+    <div className="min-h-screen bg-[#f6f1e8] text-[#191714]">
       <Header />
       <main>
         <Routes>

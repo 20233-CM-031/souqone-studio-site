@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  color: #f7f2e8;
-  background: #080a0f;
+  color: #191714;
+  background: #f6f1e8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,7 +16,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: #080a0f;
+  background: #f6f1e8;
 }
 
 body {
@@ -24,11 +24,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: Inter, system-ui, sans-serif;
-  background:
-    radial-gradient(circle at 12% 8%, rgba(77, 216, 255, 0.16), transparent 24rem),
-    radial-gradient(circle at 78% 12%, rgba(255, 122, 89, 0.12), transparent 22rem),
-    radial-gradient(circle at 50% 70%, rgba(20, 160, 111, 0.14), transparent 28rem),
-    #080a0f;
+  background: #f6f1e8;
   overflow-x: hidden;
 }
 
@@ -40,48 +36,37 @@ textarea {
 }
 
 ::selection {
-  color: #080a0f;
-  background: #4dd8ff;
+  color: #191714;
+  background: #d7b463;
 }
 
-@keyframes float-panel {
+@keyframes calm-float {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-8px);
   }
 }
 
-@keyframes scan-line {
+@keyframes soft-scan {
   0% {
-    transform: translateX(-30%);
+    transform: translateX(-35%);
     opacity: 0;
   }
-  20%, 70% {
-    opacity: 1;
+  28%, 70% {
+    opacity: 0.42;
   }
   100% {
-    transform: translateX(130%);
+    transform: translateX(135%);
     opacity: 0;
-  }
-}
-
-@keyframes pulse-ring {
-  0%, 100% {
-    opacity: 0.22;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.52;
-    transform: scale(1.05);
   }
 }
 
 @keyframes reveal-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -105,56 +90,222 @@ textarea {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
   }
 
+  .brand-page {
+    --page-bg: #f6f1e8;
+    --page-bg-2: #efe5d4;
+    --surface: rgba(255, 252, 245, 0.82);
+    --surface-strong: #fffaf0;
+    --ink: #191714;
+    --muted: #6a6258;
+    --accent: #b89145;
+    --accent-2: #1d1c1a;
+    --accent-soft: rgba(184, 145, 69, 0.16);
+    --line: rgba(25, 23, 20, 0.12);
+    --button-text: #191714;
+    min-height: 100vh;
+    color: var(--ink);
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--page-bg) 84%, white), var(--page-bg-2)),
+      var(--page-bg);
+  }
+
+  .theme-marz {
+    --page-bg: #f6f1e8;
+    --page-bg-2: #ebe1d0;
+    --surface: rgba(255, 252, 245, 0.84);
+    --surface-strong: #fffaf0;
+    --ink: #171613;
+    --muted: #655e54;
+    --accent: #b89145;
+    --accent-2: #252320;
+    --accent-soft: rgba(184, 145, 69, 0.16);
+    --line: rgba(23, 22, 19, 0.14);
+  }
+
+  .theme-souqone {
+    --page-bg: #0b584c;
+    --page-bg-2: #f3ead5;
+    --surface: rgba(255, 249, 229, 0.9);
+    --surface-strong: #fff5d8;
+    --ink: #073f36;
+    --muted: #3f6f65;
+    --accent: #f4ddb0;
+    --accent-2: #0b584c;
+    --accent-soft: rgba(244, 221, 176, 0.22);
+    --line: rgba(7, 63, 54, 0.18);
+    --button-text: #063c34;
+  }
+
+  .theme-studio {
+    --page-bg: #f0d8a8;
+    --page-bg-2: #fff2d0;
+    --surface: rgba(255, 248, 224, 0.86);
+    --surface-strong: #fff2d0;
+    --ink: #21170d;
+    --muted: #6d5738;
+    --accent: #9d7438;
+    --accent-2: #1f2e25;
+    --accent-soft: rgba(157, 116, 56, 0.16);
+    --line: rgba(33, 23, 13, 0.14);
+  }
+
+  .theme-principles {
+    --page-bg: #eef4ef;
+    --page-bg-2: #f8f2e4;
+    --surface: rgba(255, 255, 249, 0.86);
+    --surface-strong: #fffdf4;
+    --ink: #17261f;
+    --muted: #5a6a61;
+    --accent: #2f7a63;
+    --accent-2: #b89145;
+    --accent-soft: rgba(47, 122, 99, 0.12);
+    --line: rgba(23, 38, 31, 0.14);
+  }
+
+  .brand-section {
+    @apply relative overflow-hidden py-20 sm:py-24;
+  }
+
+  .brand-hero {
+    @apply relative overflow-hidden border-b py-16 sm:py-20 lg:py-24;
+    border-color: var(--line);
+  }
+
+  .brand-kicker,
   .eyebrow {
-    @apply text-xs font-black uppercase text-cyan;
+    color: var(--accent-2);
+    @apply text-xs font-black uppercase;
   }
 
+  .theme-marz .brand-kicker,
+  .theme-marz .eyebrow,
+  .theme-studio .brand-kicker,
+  .theme-studio .eyebrow {
+    color: var(--accent);
+  }
+
+  .brand-title,
   .section-title {
-    @apply font-heading text-3xl font-black leading-tight text-white sm:text-4xl lg:text-6xl;
+    color: var(--ink);
+    @apply font-heading text-4xl font-black leading-[0.98] sm:text-5xl lg:text-6xl;
   }
 
+  .brand-copy,
   .section-copy {
-    @apply max-w-3xl text-base leading-8 text-mist sm:text-lg;
+    color: var(--muted);
+    @apply max-w-3xl text-base leading-8 sm:text-lg;
   }
 
-  .panel {
-    @apply rounded-2xl border border-white/10 bg-white/[0.055] shadow-glow backdrop-blur-xl;
-  }
-
+  .brand-card,
+  .panel,
   .dark-panel {
-    @apply rounded-2xl border border-white/10 bg-charcoal/70 shadow-glow backdrop-blur-xl;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 55px rgba(54, 42, 24, 0.08);
+    backdrop-filter: blur(18px);
+    @apply rounded-3xl;
   }
 
+  .brand-card-strong {
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+    box-shadow: 0 22px 70px rgba(54, 42, 24, 0.1);
+    @apply rounded-3xl;
+  }
+
+  .brand-button,
+  .gold-button,
   .whatsapp-button {
-    @apply inline-flex min-h-12 items-center justify-center rounded-xl bg-emerald px-5 py-3 text-sm font-black text-white shadow-emerald transition hover:bg-[#10865f] focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-charcoal;
+    background: var(--accent);
+    color: var(--button-text);
+    border: 1px solid color-mix(in srgb, var(--accent) 78%, var(--ink));
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--accent) 26%, transparent);
+    @apply inline-flex min-h-12 items-center justify-center rounded-2xl px-5 py-3 text-sm font-black transition;
   }
 
-  .gold-button {
-    @apply inline-flex min-h-12 items-center justify-center rounded-xl bg-gold px-5 py-3 text-sm font-black text-charcoal shadow-lg shadow-gold/20 transition hover:bg-[#efc870] focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-charcoal;
+  .theme-marz .brand-button,
+  .theme-marz .gold-button,
+  .theme-marz .whatsapp-button,
+  .theme-studio .brand-button,
+  .theme-studio .gold-button,
+  .theme-studio .whatsapp-button {
+    color: #171613;
   }
 
+  .theme-souqone .brand-button,
+  .theme-souqone .gold-button,
+  .theme-souqone .whatsapp-button {
+    color: #073f36;
+  }
+
+  .brand-button:hover,
+  .gold-button:hover,
+  .whatsapp-button:hover {
+    transform: translateY(-1px);
+    filter: saturate(1.05);
+  }
+
+  .brand-button-secondary,
   .outline-button {
-    @apply inline-flex min-h-12 items-center justify-center rounded-xl border border-white/15 px-5 py-3 text-sm font-black text-white transition hover:border-cyan hover:text-cyan focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-charcoal;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    background: color-mix(in srgb, var(--surface) 78%, transparent);
+    @apply inline-flex min-h-12 items-center justify-center rounded-2xl px-5 py-3 text-sm font-black transition;
+  }
+
+  .brand-button-secondary:hover,
+  .outline-button:hover {
+    border-color: var(--accent);
+    color: var(--accent-2);
+    transform: translateY(-1px);
+  }
+
+  .brand-logo-card {
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 75px rgba(54, 42, 24, 0.08);
+    @apply overflow-hidden rounded-3xl;
+  }
+
+  .brand-logo-card img {
+    @apply h-full w-full object-cover;
+  }
+
+  .brand-pattern {
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.42;
+    mask-image: linear-gradient(to bottom, black, transparent 78%);
+  }
+
+  .brand-orbit {
+    border: 1px solid var(--line);
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    @apply absolute rounded-full;
   }
 
   .field-label {
-    @apply block text-sm font-black text-white;
+    color: var(--ink);
+    @apply block text-sm font-black;
   }
 
   .field-input {
-    @apply mt-2 w-full rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3 text-sm text-white outline-none transition placeholder:text-mist focus:border-cyan focus:ring-4 focus:ring-cyan/10;
+    color: var(--ink);
+    background: color-mix(in srgb, var(--surface-strong) 80%, white);
+    border: 1px solid var(--line);
+    @apply mt-2 w-full rounded-2xl px-4 py-3 text-sm outline-none transition placeholder:text-zinc-400;
   }
 
-  .future-grid {
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
-    background-size: 42px 42px;
-    mask-image: linear-gradient(to bottom, black, transparent 82%);
+  .field-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
   }
 
-  .glass-line {
-    @apply border border-white/10 bg-white/[0.055] backdrop-blur-xl;
+  .floating-panel {
+    animation: calm-float 8s ease-in-out infinite;
   }
 
   .reveal-card {
@@ -170,13 +321,119 @@ textarea {
     content: '';
     position: absolute;
     inset: 0;
-    width: 38%;
-    background: linear-gradient(90deg, transparent, rgba(77, 216, 255, 0.24), transparent);
-    animation: scan-line 4.6s ease-in-out infinite;
+    width: 34%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+    animation: soft-scan 5.8s ease-in-out infinite;
     pointer-events: none;
   }
 
-  .floating-panel {
-    animation: float-panel 7s ease-in-out infinite;
+  .sample-frame {
+    position: relative;
+    min-height: 16rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .sample-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+    opacity: 0.36;
+  }
+
+  .sample-frame-input {
+    background:
+      linear-gradient(135deg, rgba(111, 101, 86, 0.92), rgba(83, 75, 65, 0.78)),
+      var(--surface);
+  }
+
+  .sample-frame-output {
+    background:
+      radial-gradient(circle at 50% 40%, rgba(184, 145, 69, 0.2), transparent 42%),
+      linear-gradient(135deg, #fffaf0, var(--surface-strong));
+  }
+
+  .sample-label,
+  .sample-note {
+    position: absolute;
+    z-index: 2;
+    max-width: calc(100% - 2rem);
+    border: 1px solid var(--line);
+    background: rgba(255, 252, 245, 0.82);
+    color: var(--ink);
+    backdrop-filter: blur(12px);
+    @apply rounded-2xl px-3 py-2 text-xs font-black;
+  }
+
+  .sample-label {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .sample-note {
+    right: 1rem;
+    bottom: 1rem;
+    color: var(--muted);
+  }
+
+  .product-plate {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 55%;
+    width: min(72%, 24rem);
+    aspect-ratio: 1.72;
+    transform: translate(-50%, -50%) rotate(-2deg);
+    border-radius: 999px;
+    background:
+      radial-gradient(ellipse at center, #bd8d2f 0 22%, transparent 23%),
+      radial-gradient(ellipse at center, #f2df96 0 42%, transparent 43%),
+      radial-gradient(ellipse at center, #c7a95a 0 55%, transparent 56%),
+      radial-gradient(ellipse at center, #f7e7a8 0 67%, transparent 68%),
+      #16130f;
+    box-shadow: 0 1.4rem 0 rgba(22, 19, 15, 0.78), 0 2rem 2.5rem rgba(22, 19, 15, 0.22);
+  }
+
+  .product-plate::after {
+    content: '';
+    position: absolute;
+    inset: 19% 16%;
+    border: 0.34rem solid rgba(255, 252, 245, 0.74);
+    border-radius: inherit;
+  }
+
+  .product-plate-after {
+    transform: translate(-50%, -50%) rotate(0);
+    box-shadow: 0 1.25rem 0 rgba(22, 19, 15, 0.88), 0 2rem 3rem rgba(157, 116, 56, 0.2);
+  }
+
+  .product-plate-after::before {
+    content: '';
+    position: absolute;
+    inset: 23% 22%;
+    border-radius: inherit;
+    background:
+      radial-gradient(circle at 18% 30%, white 0 0.42rem, transparent 0.46rem),
+      radial-gradient(circle at 80% 28%, white 0 0.42rem, transparent 0.46rem),
+      radial-gradient(circle at 25% 68%, white 0 0.34rem, transparent 0.38rem),
+      radial-gradient(circle at 72% 72%, white 0 0.34rem, transparent 0.38rem);
+  }
+
+  .future-grid {
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .glass-line {
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(16px);
   }
 }

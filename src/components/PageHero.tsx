@@ -4,22 +4,28 @@ type PageHeroProps = {
   eyebrow: string;
   title: string;
   copy: string;
+  logoSrc?: string;
+  logoAlt?: string;
   children?: ReactNode;
 };
 
-export function PageHero({ eyebrow, title, copy, children }: PageHeroProps) {
+export function PageHero({ eyebrow, title, copy, logoSrc, logoAlt, children }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-white/10 py-20 sm:py-24">
-      <div className="future-grid absolute inset-0 opacity-50" />
-      <div className="section-shell relative">
+    <section className="brand-hero">
+      <div className="brand-pattern absolute inset-0" />
+      <div className="brand-orbit right-[10%] top-16 h-52 w-52" />
+      <div className="section-shell relative grid gap-10 lg:grid-cols-[0.92fr_0.78fr] lg:items-center">
         <div className="max-w-4xl">
-          <p className="eyebrow">{eyebrow}</p>
-          <h1 className="mt-5 font-heading text-5xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl">
-            {title}
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-mist">{copy}</p>
-          {children ? <div className="mt-8">{children}</div> : null}
+          <p className="brand-kicker">{eyebrow}</p>
+          <h1 className="brand-title mt-5">{title}</h1>
+          <p className="brand-copy mt-6">{copy}</p>
+          {children ? <div className="mt-8 flex flex-col gap-3 sm:flex-row">{children}</div> : null}
         </div>
+        {logoSrc ? (
+          <div className="brand-logo-card floating-panel min-h-72 overflow-hidden">
+            <img src={logoSrc} alt={logoAlt ?? eyebrow} className="h-full min-h-72 w-full object-cover" />
+          </div>
+        ) : null}
       </div>
     </section>
   );

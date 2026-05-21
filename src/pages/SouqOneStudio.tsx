@@ -6,57 +6,59 @@ import { whatsappLinks } from '../data/contact';
 
 export function SouqOneStudio() {
   return (
-    <>
+    <div className="brand-page theme-studio">
       <PageHero
         eyebrow="SouqOne Studio"
-        title="Showroom-ready catalog assets without losing product truth."
-        copy="SouqOne Studio is the first SouqOne product: a practical, seller-friendly visual commerce pilot for local sellers who use WhatsApp, Instagram, and catalogs to sell."
+        title="Premium catalog assets without losing product truth."
+        copy="SouqOne Studio takes its visual tone from the warm studio logo: premium, seller-friendly, and practical. It helps local sellers turn ordinary photos into showroom-ready catalog assets while preserving identity."
+        logoSrc="/brand/souqone-studio.png"
+        logoAlt="SouqOne Studio logo"
       >
-        <a href={whatsappLinks.sample} className="whatsapp-button">
+        <a href={whatsappLinks.sample} className="brand-button">
           Send Sample Photos
         </a>
       </PageHero>
 
-      <section className="py-20 sm:py-24">
+      <section className="brand-section">
         <div className="section-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <FutureDemo />
           <div>
-            <p className="eyebrow">Product demo</p>
+            <p className="brand-kicker">Product demo</p>
             <h2 className="section-title mt-4">Cleaner visuals, sharper catalogs, same product identity.</h2>
             <p className="section-copy mt-5">
-              The uploaded sample images and logos will sit here as the primary proof of work:
-              before, after, MARZ, SouqOne, and SouqOne Studio.
+              The real before and after images you share will replace the temporary samples here.
+              The surrounding system already matches the SouqOne Studio logo palette.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.03] py-20 sm:py-24">
+      <section className="brand-section border-y" style={{ borderColor: 'var(--line)', background: 'rgba(255,255,255,0.24)' }}>
         <div className="section-shell">
-          <p className="eyebrow">Features</p>
+          <p className="brand-kicker">Features</p>
           <h2 className="section-title mt-4 max-w-3xl">Built for sellers who need repeatable visual assets.</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {studioFeatures.map((feature, index) => (
-              <article key={feature} className="panel p-6">
-                <p className="text-sm font-black text-cyan">0{index + 1}</p>
-                <h3 className="mt-4 text-xl font-black text-white">{feature}</h3>
+              <article key={feature} className="brand-card p-6">
+                <p className="text-sm font-black" style={{ color: 'var(--accent)' }}>0{index + 1}</p>
+                <h3 className="mt-4 text-xl font-black">{feature}</h3>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="brand-section">
         <div className="section-shell">
-          <p className="eyebrow">Workflow</p>
+          <p className="brand-kicker">Workflow</p>
           <h2 className="section-title mt-4 max-w-3xl">WhatsApp-first, review-backed, pilot-ready.</h2>
           <div className="mt-10 grid gap-4">
             {studioWorkflow.map((step, index) => (
-              <article key={step} className="glass-line rounded-2xl p-5 sm:flex sm:items-center sm:gap-6">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan text-sm font-black text-charcoal">
+              <article key={step} className="brand-card p-5 sm:flex sm:items-center sm:gap-6">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl text-sm font-black" style={{ background: 'var(--accent)', color: 'var(--button-text)' }}>
                   {index + 1}
                 </span>
-                <p className="mt-4 text-lg font-black text-white sm:mt-0">{step}</p>
+                <p className="mt-4 text-lg font-black sm:mt-0">{step}</p>
               </article>
             ))}
           </div>
@@ -64,6 +66,6 @@ export function SouqOneStudio() {
       </section>
 
       <PilotForm />
-    </>
+    </div>
   );
 }

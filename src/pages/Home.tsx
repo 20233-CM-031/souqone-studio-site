@@ -6,37 +6,37 @@ import { whatsappLinks } from '../data/contact';
 
 export function Home() {
   return (
-    <>
-      <section className="relative min-h-[calc(100vh-5rem)] overflow-hidden border-b border-white/10 py-16 sm:py-20">
-        <div className="future-grid absolute inset-0 opacity-60" />
-        <div className="absolute left-1/2 top-24 h-80 w-80 -translate-x-1/2 rounded-full border border-cyan/20 opacity-60 [animation:pulse-ring_6s_ease-in-out_infinite]" />
-        <div className="section-shell relative grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+    <div className="brand-page theme-marz">
+      <section className="brand-hero min-h-[calc(100vh-5rem)]">
+        <div className="brand-pattern absolute inset-0" />
+        <div className="brand-orbit right-[12%] top-20 h-72 w-72" />
+        <div className="section-shell relative grid gap-12 lg:grid-cols-[0.94fr_0.86fr] lg:items-center">
           <div className="reveal-card">
-            <p className="eyebrow">MARZ Enterprises & Solutions</p>
-            <h1 className="mt-5 font-heading text-5xl font-black leading-[0.92] text-white sm:text-6xl lg:text-7xl">
-              Ethical AI commerce systems, starting with local sellers.
+            <p className="brand-kicker">MARZ Enterprises & Solutions</p>
+            <h1 className="brand-title mt-5">
+              Ethical AI commerce systems, built with calm precision.
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-mist">{openingCopy}</p>
+            <p className="brand-copy mt-6">{openingCopy}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link to="/studio" className="gold-button">
+              <Link to="/studio" className="brand-button">
                 Explore SouqOne Studio
               </Link>
-              <a href={whatsappLinks.sample} className="whatsapp-button">
+              <a href={whatsappLinks.sample} className="brand-button-secondary">
                 Send Sample Photos
               </a>
             </div>
           </div>
 
-          <div className="floating-panel">
-            <FutureDemo />
+          <div className="brand-logo-card floating-panel min-h-[420px]">
+            <img src="/brand/marz.png" alt="MARZ logo" className="h-full min-h-[420px] w-full object-cover" />
           </div>
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="brand-section">
         <div className="section-shell">
           <div className="max-w-3xl">
-            <p className="eyebrow">Why MARZ exists</p>
+            <p className="brand-kicker">Why MARZ exists</p>
             <h2 className="section-title mt-4">AI should make business stronger, not less truthful.</h2>
             <p className="section-copy mt-5">
               MARZ is built for the real operating layer: small businesses, repeatable workflows,
@@ -47,34 +47,34 @@ export function Home() {
             {marzPrinciples.map((principle, index) => (
               <article
                 key={principle}
-                className="panel reveal-card p-6"
+                className="brand-card reveal-card p-6"
                 style={{ animationDelay: `${index * 90}ms` }}
               >
-                <span className="text-sm font-black text-cyan">0{index + 1}</span>
-                <h3 className="mt-5 text-xl font-black text-white">{principle}</h3>
+                <span className="text-sm font-black" style={{ color: 'var(--accent)' }}>0{index + 1}</span>
+                <h3 className="mt-5 text-xl font-black">{principle}</h3>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.03] py-20 sm:py-24">
+      <section className="brand-section border-y" style={{ borderColor: 'var(--line)', background: 'rgba(255,255,255,0.28)' }}>
         <div className="section-shell">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <p className="eyebrow">Story framework</p>
+              <p className="brand-kicker">Story framework</p>
               <h2 className="section-title mt-4">The path from seller pain to ethical AI.</h2>
             </div>
             <div className="grid gap-4">
               {storyChapters.map((item, index) => (
                 <article
                   key={item.title}
-                  className="glass-line reveal-card rounded-2xl p-5"
+                  className="brand-card reveal-card p-5"
                   style={{ animationDelay: `${index * 80}ms` }}
                 >
-                  <p className="text-xs font-black text-coral">{item.chapter}</p>
-                  <h3 className="mt-2 text-2xl font-black text-white">{item.title}</h3>
-                  <p className="mt-3 leading-7 text-mist">{item.body}</p>
+                  <p className="text-xs font-black" style={{ color: 'var(--accent)' }}>{item.chapter}</p>
+                  <h3 className="mt-2 text-2xl font-black">{item.title}</h3>
+                  <p className="mt-3 leading-7" style={{ color: 'var(--muted)' }}>{item.body}</p>
                 </article>
               ))}
             </div>
@@ -82,35 +82,55 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="brand-section">
         <div className="section-shell grid gap-6 lg:grid-cols-3">
-          <article className="panel p-7">
-            <p className="eyebrow">SouqOne</p>
-            <h2 className="mt-4 text-3xl font-black text-white">The local commerce initiative.</h2>
-            <p className="mt-4 leading-7 text-mist">
+          <article className="brand-card p-7 theme-souqone">
+            <div className="brand-logo-card mb-6 h-24 rounded-3xl">
+              <img src="/brand/souqone.png" alt="SouqOne logo" />
+            </div>
+            <p className="brand-kicker">SouqOne</p>
+            <h2 className="mt-4 text-3xl font-black">The local commerce initiative.</h2>
+            <p className="mt-4 leading-7" style={{ color: 'var(--muted)' }}>
               SouqOne focuses on helping local sellers grow with practical, trusted digital tools.
             </p>
-            <Link to="/souqone" className="outline-button mt-6">
+            <Link to="/souqone" className="brand-button mt-6">
               View SouqOne
             </Link>
           </article>
-          <article className="panel p-7 lg:col-span-2">
-            <p className="eyebrow">SouqOne Studio</p>
-            <h2 className="mt-4 text-3xl font-black text-white">
+          <article className="brand-card p-7 lg:col-span-2 theme-studio">
+            <div className="brand-logo-card mb-6 h-28 rounded-3xl">
+              <img src="/brand/souqone-studio.png" alt="SouqOne Studio logo" />
+            </div>
+            <p className="brand-kicker">SouqOne Studio</p>
+            <h2 className="mt-4 text-3xl font-black">
               The first product: visual commerce assets for WhatsApp sellers.
             </h2>
-            <p className="mt-4 max-w-3xl leading-7 text-mist">
+            <p className="mt-4 max-w-3xl leading-7" style={{ color: 'var(--muted)' }}>
               Studio begins as a managed pilot: product image enhancement, WhatsApp cards, and
               mini-catalog assets with manual review for truth and quality.
             </p>
-            <Link to="/studio" className="gold-button mt-6">
+            <Link to="/studio" className="brand-button mt-6">
               See Product Demo
             </Link>
           </article>
         </div>
       </section>
 
+      <section className="brand-section theme-studio">
+        <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p className="brand-kicker">First pilot surface</p>
+            <h2 className="section-title mt-4">A calmer product demo with proof space ready.</h2>
+            <p className="section-copy mt-5">
+              The Studio visual area now has a warmer premium system inspired by the SouqOne Studio
+              mark. Your real before and after images can replace the temporary samples here.
+            </p>
+          </div>
+          <FutureDemo />
+        </div>
+      </section>
+
       <PilotForm />
-    </>
+    </div>
   );
 }
