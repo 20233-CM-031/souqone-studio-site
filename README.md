@@ -2,6 +2,12 @@
 
 Static landing website for SouqOne Studio, a WhatsApp-first pilot service under SouqOne by MARZ Enterprises & Solutions.
 
+## Live Deployment
+
+- Production site: https://souqone-studio-413.netlify.app
+- GitHub repository: https://github.com/20233-CM-031/souqone-studio-site
+- Netlify project: `souqone-studio-413`
+
 ## Stack
 
 - Vite
@@ -32,13 +38,14 @@ npm run preview
 
 ## Deploy
 
-Connect this GitHub repository to Netlify.
+This repository is connected to Netlify continuous deployment from the `main` branch.
 
 - Build command: `npm run build`
 - Publish directory: `dist`
 - Form name: `pilot-application`
 
 The project includes `netlify.toml` with the SPA redirect required for `/privacy`, `/terms`, `/ethics`, and `/thank-you`.
+Netlify Forms are registered through the static `public/__forms.html` file and mirrored in the React pilot form.
 
 ## Important Placeholders
 
