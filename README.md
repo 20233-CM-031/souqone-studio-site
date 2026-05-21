@@ -1,6 +1,6 @@
-# SouqOne Studio Launch Website
+# MARZ / SouqOne / SouqOne Studio Website
 
-Static landing website for SouqOne Studio, a WhatsApp-first pilot service under SouqOne by MARZ Enterprises & Solutions.
+Static MARZ-first website for ethical AI commerce positioning, SouqOne initiative storytelling, and SouqOne Studio WhatsApp pilot lead generation.
 
 ## Live Deployment
 
@@ -53,6 +53,8 @@ Review before public launch:
 
 - WhatsApp number in `src/data/contact.ts`
 - Contact email in `src/data/contact.ts`
+- Founder LinkedIn URL in `src/data/contact.ts`
+- MARZ logo, SouqOne logo, and SouqOne Studio logo assets
 - Sample images in `public/samples`
 - `public/og-image.png`
 - UPI/payment wording if the pilot process changes
@@ -60,7 +62,7 @@ Review before public launch:
 
 ## Launch Status
 
-This site is for the early WhatsApp-first pilot of SouqOne Studio.
+This site is for MARZ brand positioning and the early WhatsApp-first pilot of SouqOne Studio.
 
 It intentionally does not include:
 
@@ -74,6 +76,11 @@ It intentionally does not include:
 ## Routes
 
 - `/` - main landing page
+- `/about` - About MARZ
+- `/souqone` - SouqOne initiative
+- `/studio` - SouqOne Studio conversion page
+- `/principles` - ethical AI and truthful commerce principles
+- `/contact` - WhatsApp, email, and pilot form
 - `/privacy` - privacy policy starter draft
 - `/terms` - terms of use starter draft
 - `/ethics` - ethical commerce statement

@@ -2,19 +2,25 @@ import { whatsappLinks } from '../data/contact';
 
 export function PilotForm() {
   return (
-    <section id="apply" className="bg-white py-20">
-      <div className="section-shell">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-          <div>
-            <p className="eyebrow">Apply</p>
-            <h2 className="section-title mt-3">Apply for the SouqOne Studio pilot.</h2>
+    <section id="apply" className="relative overflow-hidden py-20 sm:py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(77,216,255,0.12),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(20,160,111,0.14),transparent_34%)]" />
+      <div className="section-shell relative">
+        <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+          <div className="reveal-card">
+            <p className="eyebrow">Pilot access</p>
+            <h2 className="section-title mt-4">Apply for SouqOne Studio.</h2>
             <p className="section-copy mt-5">
-              After submitting, we will contact you on WhatsApp. For fastest response, send sample
-              product photos directly on WhatsApp.
+              This is a WhatsApp-first pilot for selected local sellers. The website captures
+              intent; the real pilot conversation starts on WhatsApp with sample product photos.
             </p>
-            <a href={whatsappLinks.sample} className="whatsapp-button mt-8">
-              Send Sample Photos on WhatsApp
-            </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href={whatsappLinks.sample} className="whatsapp-button">
+                Send Sample Photos
+              </a>
+              <a href={whatsappLinks.general} className="outline-button">
+                Ask Before Applying
+              </a>
+            </div>
           </div>
 
           <form
@@ -23,7 +29,7 @@ export function PilotForm() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             action="/thank-you"
-            className="panel p-6 lg:p-8"
+            className="panel p-5 sm:p-7"
           >
             <input type="hidden" name="form-name" value="pilot-application" />
             <input type="hidden" name="bot-field" />

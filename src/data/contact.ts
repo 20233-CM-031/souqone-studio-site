@@ -1,6 +1,7 @@
 export const whatsappNumber = '919391114126';
 export const displayWhatsapp = '+91 9391114126';
 export const contactEmail = 'marzsolution37@gmail.com';
+export const founderLinkedIn = '';
 
 const encode = (message: string) => encodeURIComponent(message);
 

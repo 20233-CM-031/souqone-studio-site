@@ -1,65 +1,67 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { whatsappLinks } from '../data/contact';
 
 const navItems = [
-  ['Home', '/#home'],
-  ['Story', '/#story'],
-  ['Services', '/#services'],
-  ['How It Works', '/#workflow'],
-  ['Pilot Plans', '/#plans'],
-  ['Trust Principles', '/#trust'],
-  ['Apply', '/#apply'],
+  ['Home', '/'],
+  ['About MARZ', '/about'],
+  ['SouqOne', '/souqone'],
+  ['Studio', '/studio'],
+  ['Principles', '/principles'],
+  ['Contact', '/contact'],
 ];
 
 export function Header() {
-  const location = useLocation();
-
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-charcoal/95 text-white backdrop-blur">
-      <div className="section-shell flex min-h-16 items-center justify-between gap-3">
-        <Link to="/" className="flex items-center gap-3" aria-label="SouqOne Studio home">
-          <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-gold/40 bg-gold/10 font-heading text-xl font-bold text-gold">
-            S
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-charcoal/78 text-white backdrop-blur-2xl">
+      <div className="section-shell flex min-h-20 items-center justify-between gap-4">
+        <Link to="/" className="group flex items-center gap-3" aria-label="MARZ home">
+          <span className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-cyan/40 bg-cyan/10 font-heading text-lg font-black text-cyan shadow-glow">
+            <span className="absolute inset-0 bg-gradient-to-br from-cyan/20 via-transparent to-emerald/20" />
+            <span className="relative">M</span>
           </span>
-          <span>
-            <span className="block font-heading text-lg font-bold leading-5">SouqOne Studio</span>
-            <span className="block text-xs font-semibold text-mist">A MARZ initiative</span>
+          <span className="leading-tight">
+            <span className="block font-heading text-lg font-black">MARZ</span>
+            <span className="block text-xs font-bold text-mist">Ethical AI commerce systems</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-5 text-sm font-semibold text-zinc-200 lg:flex">
+        <nav className="hidden items-center gap-1 rounded-2xl border border-white/10 bg-white/[0.045] p-1 text-sm font-bold text-mist lg:flex">
           {navItems.map(([label, href]) => (
-            <a
+            <NavLink
               key={href}
-              href={href}
-              className="transition hover:text-gold"
-              aria-current={location.hash === href.replace('/', '') ? 'page' : undefined}
+              to={href}
+              className={({ isActive }) =>
+                `rounded-xl px-3.5 py-2 transition ${
+                  isActive ? 'bg-white text-charcoal' : 'hover:bg-white/10 hover:text-white'
+                }`
+              }
             >
               {label}
-            </a>
+            </NavLink>
           ))}
-          <a href={whatsappLinks.general} className="transition hover:text-gold">
-            WhatsApp
-          </a>
         </nav>
 
-        <a href={whatsappLinks.sample} className="whatsapp-button px-4 py-2.5">
-          <span className="sm:hidden">Send Photos</span>
-          <span className="hidden sm:inline">Send Sample Photos</span>
+        <a href={whatsappLinks.sample} className="whatsapp-button hidden sm:inline-flex">
+          Send Sample Photos
         </a>
       </div>
-      <div className="border-t border-white/10 lg:hidden">
-        <nav className="section-shell flex gap-5 overflow-x-auto py-3 text-sm font-semibold text-zinc-200">
-          {navItems.map(([label, href]) => (
-            <a key={href} href={href} className="shrink-0 transition hover:text-gold">
-              {label}
-            </a>
-          ))}
-          <a href={whatsappLinks.general} className="shrink-0 transition hover:text-gold">
-            WhatsApp
-          </a>
-        </nav>
-      </div>
+      <nav className="section-shell flex gap-3 overflow-x-auto pb-4 text-sm font-bold text-mist lg:hidden">
+        {navItems.map(([label, href]) => (
+          <NavLink
+            key={href}
+            to={href}
+            className={({ isActive }) =>
+              `shrink-0 rounded-xl border px-3 py-2 transition ${
+                isActive
+                  ? 'border-cyan bg-cyan/15 text-cyan'
+                  : 'border-white/10 bg-white/[0.04] hover:text-white'
+              }`
+            }
+          >
+            {label}
+          </NavLink>
+        ))}
+      </nav>
     </header>
   );
 }
