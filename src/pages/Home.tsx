@@ -122,8 +122,7 @@ export function Home() {
             <p className="brand-kicker">First pilot surface</p>
             <h2 className="section-title mt-4">A calmer product demo with proof space ready.</h2>
             <p className="section-copy mt-5">
-              The Studio visual area now pairs the warmer premium system with real before and after
-              effect images and a sample AI ads video, so sellers see proof before they send sample photos.
+              
             </p>
           </div>
           <FutureDemo />
