@@ -54,11 +54,19 @@ Review before public launch:
 - WhatsApp number in `src/data/contact.ts`
 - Contact email in `src/data/contact.ts`
 - Founder LinkedIn URL in `src/data/contact.ts`
-- MARZ logo, SouqOne logo, and SouqOne Studio logo assets
-- Sample images in `public/samples`
+- Real seller before/after sample images in `public/samples`
 - `public/og-image.png`
 - UPI/payment wording if the pilot process changes
 - Any future social links
+
+## Brand Assets
+
+The supplied MARZ, SouqOne, and SouqOne Studio logos are committed in `public/brand`.
+Each primary page uses a logo-led theme:
+
+- MARZ pages: ivory, charcoal, and measured gold
+- SouqOne pages: market green and trusted cream
+- SouqOne Studio pages: warm premium beige, dark ink, and catalog gold
 
 ## Launch Status
 
